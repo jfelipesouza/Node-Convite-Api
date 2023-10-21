@@ -12,7 +12,7 @@ router.get('/gifts', (req, res) => {
       .then(gifts => {
         return res.send({ gifts })
       })
-      .catch(e => console.log(e))
+      .catch(e => console.warn(e))
   } catch (error) {
     return res.status(500).send('Erro ao buscar presentes')
   }
